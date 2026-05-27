@@ -20,16 +20,6 @@ const flowerMessages = [
   { emoji: '🌻', msg: 'Como el girasol que siempre busca el sol, tú siempre encontraste la manera de darnos lo mejor, incluso cuando era difícil.' },
   { emoji: '🌷', msg: 'Tu abrazo es el lugar más seguro del universo. No importa cuántos años pasen, siempre querremos volver a él.' },
 ];
-
-const memoryCards = [
-  { icon: '🍪', color: '#fff5e0', label: 'Tu cocina mágica',      msg: 'Ese olor a galletas recién horneadas, a sopa en domingo, a torta de cumpleaños... Tu cocina siempre fue el corazón del hogar. Cada plato fue una declaración de amor sin palabras.' },
-  { icon: '🌙', color: '#f0eeff', label: 'Noches de cuidado',     msg: 'Cuántas noches pasaste despierta cuidándonos, sin que nadie te lo pidiera. Tu dedicación en los momentos difíciles es una de las formas más puras de amor que existe.' },
-  { icon: '📚', color: '#e8f5e9', label: 'Lecciones de vida',     msg: 'Nos enseñaste a leer, pero sobre todo nos enseñaste a entender el mundo con empatía y bondad. Tu sabiduría vive en cada decisión que tomamos.' },
-  { icon: '🎉', color: '#fde8f5', label: 'Celebraciones juntos',  msg: 'Cada fiesta, cada cumpleaños, cada logro pequeño y grande cobró vida gracias a tu entusiasmo. Hiciste de cada momento ordinario algo para recordar siempre.' },
-  { icon: '🤲', color: '#fff8e0', label: 'Manos que sanan',       msg: 'Tus manos han construido, cosido, acariciado y curado. Hay una magia en ellas que ningún médico puede replicar. Fueron el primer refugio que conocimos.' },
-  { icon: '💌', color: '#f5e8ff', label: 'Palabras que quedan',   msg: 'Guardo cada consejo tuyo como un tesoro. Las palabras que me dijiste en los momentos más difíciles se convirtieron en los pilares sobre los que construí mi vida.' },
-];
-
 const leafMessages = [
   'Fuiste mi primer hogar antes de conocer el mundo.',
   'Tu nombre es sinónimo de amor incondicional.',
@@ -216,38 +206,6 @@ function showFlowerMsg(msg) {
   $('flower-msg-text').textContent = msg;
   box.classList.remove('hidden');
 }
-
-/* ── RECUERDOS ─────────────────────────────────────── */
-function initMemories() {
-  const grid = $('memory-grid');
-  grid.innerHTML = '';
-  memoryCards.forEach((card, idx) => {
-    const el = document.createElement('div');
-    el.className = 'memory-card';
-    el.style.background = card.color;
-    el.style.animationDelay = idx * 0.08 + 's';
-    el.innerHTML = `
-      <div class="memory-card-icon">${card.icon}</div>
-      <div class="memory-card-label">${card.label}</div>
-    `;
-    el.addEventListener('click', () => openMemoryModal(card));
-    grid.appendChild(el);
-  });
-
-  $('btn-close-modal').addEventListener('click', () => {
-    $('memory-modal').classList.add('hidden');
-  });
-  $('memory-modal').addEventListener('click', e => {
-    if (e.target === $('memory-modal')) $('memory-modal').classList.add('hidden');
-  });
-}
-
-function openMemoryModal(card) {
-  $('modal-icon').textContent = card.icon;
-  $('modal-message').textContent = card.msg;
-  $('memory-modal').classList.remove('hidden');
-}
-
 /* ── ÁRBOL ─────────────────────────────────────────── */
 function initTree() {
   const container = $('tree-leaves');
@@ -340,7 +298,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCover();
   initLetter();
   initGarden();
-  initMemories();
   initTree();
   initNav();
 
