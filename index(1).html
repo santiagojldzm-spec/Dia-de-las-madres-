@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Día de las Madres 💐</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Partículas de fondo -->
+  <div id="particles-container"></div>
+
+  <!-- Corazones flotantes (onclick global) -->
+  <div id="hearts-container"></div>
+
+  <!-- ======================== PORTADA ======================== -->
+  <section id="cover" class="screen active">
+    <div class="cover-bg-flowers"></div>
+    <div class="cover-content">
+      <div class="cover-flowers-top">
+        <span class="deco-flower f1">🌸</span>
+        <span class="deco-flower f2">🌷</span>
+        <span class="deco-flower f3">🌸</span>
+        <span class="deco-flower f4">💐</span>
+        <span class="deco-flower f5">🌷</span>
+      </div>
+      <p class="cover-eyebrow">con todo el amor del mundo</p>
+      <h1 class="cover-title">Feliz Día<br/><em>de las Madres</em></h1>
+      <p class="cover-subtitle">Hoy y siempre, gracias por ser la luz que guía nuestros pasos,<br/>el abrazo que sana todo y el hogar que llevamos en el corazón.</p>
+      <button class="btn-open" id="btn-open">
+        <span class="btn-icon">🎁</span>
+        <span>Abrir mi regalo</span>
+      </button>
+      <div class="cover-flowers-bottom">
+        <span class="deco-flower fb1">🌼</span>
+        <span class="deco-flower fb2">🌸</span>
+        <span class="deco-flower fb3">🌺</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== NAVEGACIÓN ======================== -->
+  <nav id="main-nav" class="hidden">
+    <button class="nav-btn active" data-section="letter">✉️ Carta</button>
+    <button class="nav-btn" data-section="garden">🌷 Jardín</button>
+    <button class="nav-btn" data-section="memories">📷 Recuerdos</button>
+    <button class="nav-btn" data-section="tree">🌳 Árbol</button>
+    <button class="nav-btn" data-section="final">💛 Final</button>
+  </nav>
+
+  <!-- ======================== CARTA ======================== -->
+  <section id="letter" class="screen">
+    <div class="section-header">
+      <h2 class="section-title">Una Carta Para Ti</h2>
+      <p class="section-hint">Haz clic en el sobre para abrirlo ✨</p>
+    </div>
+
+    <div class="envelope-wrapper">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="envelope-seal">💛</div>
+        </div>
+        <div class="letter-paper" id="letter-paper">
+          <div class="letter-deco-top">🌸 · · · 🌸</div>
+          <p class="letter-greeting">Querida Mamá,</p>
+          <p class="letter-text" id="letter-text"></p>
+          <p class="letter-sign">Con amor infinito,<br/><em>Tu familia 💕</em></p>
+          <div class="letter-deco-bottom">🌷 · · · 🌷</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== JARDÍN ======================== -->
+  <section id="garden" class="screen">
+    <div class="section-header">
+      <h2 class="section-title">Tu Jardín de Amor</h2>
+      <p class="section-hint">Toca cada flor para descubrir un mensaje 🌸</p>
+    </div>
+
+    <div class="garden-ground">
+      <div class="garden-flowers" id="garden-flowers">
+        <!-- generado por JS -->
+      </div>
+      <div class="garden-grass"></div>
+    </div>
+
+    <div class="flower-message-box hidden" id="flower-msg-box">
+      <button class="close-msg" id="close-flower-msg">×</button>
+      <p class="flower-msg-text" id="flower-msg-text"></p>
+    </div>
+  </section>
+
+  <!-- ======================== RECUERDOS ======================== -->
+  <section id="memories" class="screen">
+    <div class="section-header">
+      <h2 class="section-title">Caja de Recuerdos</h2>
+      <p class="section-hint">Selecciona cada tarjeta para ver un recuerdo especial 💝</p>
+    </div>
+
+    <div class="memory-grid" id="memory-grid">
+      <!-- generado por JS -->
+    </div>
+
+    <div class="memory-modal hidden" id="memory-modal">
+      <div class="memory-modal-card">
+        <div class="modal-icon" id="modal-icon"></div>
+        <p class="modal-message" id="modal-message"></p>
+        <button class="btn-close-modal" id="btn-close-modal">Cerrar ✨</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ÁRBOL ======================== -->
+  <section id="tree" class="screen">
+    <div class="section-header">
+      <h2 class="section-title">Árbol de Dedicatorias</h2>
+      <p class="section-hint">Cada hoja guarda una dedicatoria especial 🍃</p>
+    </div>
+
+    <div class="tree-container">
+      <svg class="tree-svg" id="tree-svg" viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg">
+        <!-- Tronco -->
+        <path d="M240 460 Q235 380 230 320 Q225 260 240 200" stroke="#b07d4a" stroke-width="18" fill="none" stroke-linecap="round"/>
+        <path d="M260 460 Q265 380 270 320 Q275 260 260 200" stroke="#c8935a" stroke-width="14" fill="none" stroke-linecap="round"/>
+        <!-- Ramas -->
+        <path d="M242 340 Q190 300 150 260" stroke="#b07d4a" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <path d="M255 300 Q310 260 355 230" stroke="#b07d4a" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <path d="M248 260 Q200 220 170 180" stroke="#b07d4a" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M252 240 Q300 200 330 170" stroke="#b07d4a" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <path d="M250 210 Q250 160 250 130" stroke="#b07d4a" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <!-- Copa -->
+        <ellipse cx="250" cy="130" rx="110" ry="80" fill="#f2c4d0" opacity="0.5"/>
+        <ellipse cx="160" cy="200" rx="80" ry="60" fill="#d4b8e8" opacity="0.5"/>
+        <ellipse cx="340" cy="190" rx="80" ry="60" fill="#b8d4f0" opacity="0.5"/>
+        <ellipse cx="200" cy="160" rx="75" ry="55" fill="#f9dde5" opacity="0.6"/>
+        <ellipse cx="300" cy="155" rx="75" ry="55" fill="#e8d4f5" opacity="0.6"/>
+        <!-- Hierba base -->
+        <ellipse cx="250" cy="462" rx="90" ry="14" fill="#c8e6c0" opacity="0.6"/>
+      </svg>
+      <!-- Hojas interactivas generadas por JS -->
+      <div class="tree-leaves" id="tree-leaves"></div>
+    </div>
+
+    <div class="leaf-tooltip hidden" id="leaf-tooltip">
+      <p id="leaf-msg"></p>
+    </div>
+  </section>
+
+  <!-- ======================== FINAL ======================== -->
+  <section id="final" class="screen">
+    <div class="falling-flowers" id="falling-flowers"></div>
+    <div class="final-content">
+      <div class="final-icon">💛</div>
+      <h2 class="final-title">Gracias, Mamá</h2>
+      <p class="final-text">
+        Porque eres el primer latido que alguien escuchó,<br/>
+        la mano que secó las lágrimas sin preguntar,<br/>
+        la voz que cantó en la oscuridad hasta que llegó la luz.<br/><br/>
+        Eres el origen de todo lo que somos<br/>
+        y el refugio al que siempre queremos volver.<br/><br/>
+        <strong>Hoy y cada día, te amamos sin medida.</strong>
+      </p>
+      <div class="final-flowers-row">🌸 🌷 💐 🌺 🌸 🌼 🌷</div>
+      <button class="btn-restart" id="btn-restart">🏠 Volver al inicio</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
