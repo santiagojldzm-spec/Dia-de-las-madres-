@@ -8,31 +8,29 @@
 let currentSection = null;
 
 /* ── MENSAJES ──────────────────────────────────────── */
-const letterMessage = `Hay palabras que nacen del alma y que ningún regalo puede reemplazar. Esta es una de ellas.\n\nDesde el primer momento en que me tomaste en brazos, supiste exactamente cómo hacerme sentir en casa en este mundo. Con cada sacrificio silencioso, con cada madrugada que nadie vio, con cada abrazo que llegó justo cuando más lo necesitaba, construiste la persona que soy hoy.\n\nNo hay forma de medir todo lo que has dado. Tu amor no tiene condiciones, tu paciencia no tiene límites y tu fortaleza no tiene igual. Eres el corazón que late detrás de todo lo que hacemos.\n\nHoy, en tu día, quiero que sepas que te veo, que te admiro y que te agradezco. No sólo por lo que haces, sino por todo lo que eres.\n\nGracias por enseñarme a levantarme, a soñar, a perdonar y a amar sin medida. Eres, sin duda, el mejor regalo que la vida nos ha dado.`;
-
 const flowerMessages = [
-  { emoji: '🌸', msg: 'Tu ternura es capaz de transformar cualquier día gris en uno lleno de luz y esperanza. Gracias por siempre encontrar el lado hermoso de las cosas.' },
-  { emoji: '🌷', msg: 'Como el tulipán que florece cada primavera, tú renaces con nosotros en cada etapa de la vida. Tu amor es constante, fiel y siempre a tiempo.' },
-  { emoji: '🌼', msg: 'Tienes el don de hacer que los momentos pequeños se sientan extraordinarios. Una cena en casa contigo vale más que cualquier festín.' },
-  { emoji: '🌺', msg: 'Tu valentía nos enseñó que los obstáculos no son muros, sino peldaños. Gracias por mostrarnos el camino con tu ejemplo.' },
-  { emoji: '💐', msg: 'Eres el origen de nuestra fuerza. Cuando el mundo se siente pesado, recordar tu voz nos devuelve el equilibrio.' },
-  { emoji: '🌸', msg: 'No existe perfume en el mundo que supere el aroma de tu cocina ni música más bella que tu risa llenando la casa.' },
-  { emoji: '🌻', msg: 'Como el girasol que siempre busca el sol, tú siempre encontraste la manera de darnos lo mejor, incluso cuando era difícil.' },
-  { emoji: '🌷', msg: 'Tu abrazo es el lugar más seguro del universo. No importa cuántos años pasen, siempre querremos volver a él.' },
+  { emoji: '🌸', msg: 'Tu amor incondicional hacia nosotros hace que cualquier dia gris se vuelva colorido' },
+  { emoji: '🌷', msg: 'A pesar del tiempo que pase tu siempre estas conmigo ,apoyandome ,riendo o jugando.Pero lo mas importante es que estas ahi.' },
+  { emoji: '🌼', msg: 'Tienes el don de hacer que los momentos pequeños se sientan muy nindes.' },
+  { emoji: '🌺', msg: 'Tu valentía me enseño a como sobrellevar cada cosita chiquita que pasen ademas sabiendo que te tengo a mi lado por si algo mal sale ' },
+  { emoji: '💐', msg: 'Para mi, eres mi lugar seguro , donde pueda reir o de hablar de cualquier cosa sin miedo a sentirme juzgado.' },
+  { emoji: '🌸', msg: 'Gracias por sacrificarte por mi , aunque para ti no sea mucho el darme digamos tu comida , para mi significa el amor incondicional que me tienes.' },
+  { emoji: '🌻', msg: 'Tu siempre tratas de darnos lo mejor y como eres la mejor mamà del mundo lo logras nos haces los hijos mas afortunados del mundo mundial.' },
+  { emoji: '🌷', msg: 'Tu abrazo es el lugar más seguro del universo. No importa cuántos años pasen, siempre voy a querer ir a tus brazos.' },
 ];
 const leafMessages = [
   'Fuiste mi primer hogar antes de conocer el mundo.',
   'Tu nombre es sinónimo de amor incondicional.',
   'Cada sacrificio tuyo construyó mis alas.',
-  'Soy quien soy gracias a tu guía y paciencia.',
-  'Tu risa es la melodía más hermosa de mi historia.',
+  'Soy quien soy gracias a tu amor y paciencia.',
+  'Reirme junto ati es mi medicina.',
   'Me enseñaste que el amor se muestra, no solo se dice.',
-  'Eres la raíz que me sostiene y el cielo que me inspira.',
+  'Eres la raíz que me sostiene,sin tu amor todo se caeria.',
   'Gracias por creer en mí incluso cuando yo dudaba.',
   'Tu fortaleza silenciosa me mostró lo que es el coraje.',
-  'En cada logro mío, hay una parte tuya.',
+  'Mis logros te los dedico porque se que sin tu apoyo no lo hubiera logrado.',
   'Eres irreemplazable, única, extraordinaria.',
-  'El mundo es mejor porque tú estás en él.',
+  'tu eres mi mundo.',
 ];
 
 /* ── POSICIONES DE HOJAS EN EL ÁRBOL ──────────────── */
