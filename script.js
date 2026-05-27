@@ -8,6 +8,7 @@
 let currentSection = null;
 
 /* ── MENSAJES ──────────────────────────────────────── */
+const letterMessage= `Mami,para mi se me hace dificil decirte algunas cosas mas que todo por penoso pero para mi eres lo mejor del mundo mundial.\n\nGracias por estar ahi para mi siempre. por tu amor incondicional y por todas las enseñanzas que me has dado y tambien por todo lo que me diste.\n\nTe amo muchisimo mami y gracias por tu paciencia y tu fortalwza y por guiarme a lo que soy ahora.\n\nMuchis sasias mami feliz dia de las madres. `
 const flowerMessages = [
   { emoji: '🌸', msg: 'Tu amor incondicional hacia nosotros hace que cualquier dia gris se vuelva colorido' },
   { emoji: '🌷', msg: 'A pesar del tiempo que pase tu siempre estas conmigo ,apoyandome ,riendo o jugando.Pero lo mas importante es que estas ahi.' },
