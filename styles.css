@@ -328,7 +328,7 @@ body {
   overflow-y: auto;
 }
 .envelope.open .letter-paper {
-  transform: translateX(-50%) translateY(-105%);
+  transform: translateX(-50%) translateY(-320px);
   opacity: 1;
 }
 .letter-deco-top, .letter-deco-bottom {
