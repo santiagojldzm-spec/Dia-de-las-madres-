@@ -312,7 +312,7 @@ body {
 /* Carta */
 .letter-paper {
   position: absolute;
-  bottom: 8px;
+  bottom: -180px;
   left: 50%;
   width: calc(100% - 30px);
   background: #fffdf8;
@@ -332,7 +332,7 @@ body {
               opacity 0.6s ease 0.3s;
 }
 .envelope.open .letter-paper {
-  transform: translateX(-50%) translateY(-80px);
+  transform: translateX(-50%);
   opacity: 1;
 }
 .letter-deco-top, .letter-deco-bottom {
