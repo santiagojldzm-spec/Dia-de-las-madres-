@@ -332,7 +332,7 @@ body {
               opacity 0.6s ease 0.3s;
 }
 .envelope.open .letter-paper {
-  transform: translateX(-50%) translateY(-330px);
+  transform: translateX(-50%) translateY(-180px);
   opacity: 1;
 }
 .letter-deco-top, .letter-deco-bottom {
